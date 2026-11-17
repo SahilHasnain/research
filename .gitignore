@@ -1,0 +1,91 @@
+# ---------------------------------------------------------------------------
+# Media / generated output (never commit video, audio or artwork)
+# ---------------------------------------------------------------------------
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.mpeg
+*.mpg
+*.m4v
+*.ts
+*.flv
+*.3gp
+
+*.mp3
+*.m4a
+*.aac
+*.wav
+*.flac
+*.ogg
+*.opus
+*.wma
+
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.tif
+*.tiff
+*.psd
+
+# Work areas that only hold generated media / throwaway experiments
+/cut/
+/thumbnails/
+/tmp-test/
+
+# download/ keeps the small detection JSONs (useful, cheap to version),
+# but the raw audio/video and rendered thumbnails there are ignored above.
+
+# ---------------------------------------------------------------------------
+# Pipeline runtime state (local, changes on every queue run)
+# ---------------------------------------------------------------------------
+/queue/.processor.lock
+/queue/jobs.json
+/queue/uploads.json
+/queue/source-comments.json
+/queue/logs/
+
+# Upload receipts, generated metadata and result files
+/yt/queue-uploads/
+/yt/upload-metadata*.json
+*.meta.json
+*-result.json
+
+# ---------------------------------------------------------------------------
+# Secrets / environment
+# ---------------------------------------------------------------------------
+*.env
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Dependencies, caches, logs and temporary files
+# ---------------------------------------------------------------------------
+node_modules/
+.npm/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+*.log
+*.tmp
+*.temp
+*.part
+*.partial
+*.crdownload
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# OS / editor clutter
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+config.bat
